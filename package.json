@@ -7,5 +7,8 @@
   },
   "author": "Audren Launay",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "helius-sdk": "^1.4.0"
+  }
 }
