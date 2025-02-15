@@ -1,19 +1,19 @@
 {
-  "name": "solrob",
-  "version": "1.0.0",
-  "main": "server.js",
+  "name": "screenshots_app",
+  "version": "0.0.1",
+  "main": "app.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Audren Launay",
+  "author": "AL",
   "license": "ISC",
-  "description": "",
+  "description": "App to take screenshots of websites",
   "dependencies": {
-    "body-parser": "^1.20.3",
-    "express": "^4.21.2",
-    "helius-sdk": "^1.4.0",
-    "http": "^0.0.1-security",
-    "jsonwebtoken": "^9.0.2"
+    "child_process": "^1.0.2",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "puppeteer": "^24.1.1",
+    "url": "^0.11.4"
   }
 }
