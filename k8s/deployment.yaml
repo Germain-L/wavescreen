@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: wavescreen
+  name: wavescreen-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wavescreen
+  template:
+    metadata:
+      labels:
+        app: wavescreen
+    spec:
+      containers:
+      - name: wavescreen-frontend
+        image: registry.germainleignel.com/personal/wavescreen-frontend:latest
+        ports:
+        - containerPort: 3000
+        volumeMounts:
+        - name: screenshots-volume
+          mountPath: /app/static/
+      volumes:
+      - name: screenshots-volume
+        persistentVolumeClaim:
+          claimName: pvc-screenshots

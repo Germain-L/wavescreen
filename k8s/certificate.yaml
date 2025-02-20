@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: wavescreen-certificate
+  namespace: wavescreen
+spec:
+  secretName: wavescreen-tls
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  dnsNames:
+  - wavescreen.germainleignel.com

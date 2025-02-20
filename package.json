@@ -45,5 +45,11 @@
 		"@vietsch/svelte-image-gallery": "^1.1.2",
 		"puppeteer": "^24.2.1",
 		"svelte-pan-zoom": "^0.0.13"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild",
+			"puppeteer"
+		]
 	}
 }

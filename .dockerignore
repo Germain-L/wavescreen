@@ -1,0 +1,28 @@
+# Ignore dependency directories (will be freshly installed)
+node_modules
+
+# Ignore Git files
+.git
+.gitignore
+
+# SvelteKit build output and temporary files (generated during development)
+.svelte-kit
+build
+client
+
+# Local environment files (don't leak secrets)
+.env
+.env.*
+
+# Ignore editor and tooling files
+.vscode
+*.log
+
+# Ignore configuration files not needed in the container
+.prettierignore
+.prettierrc
+README.md
+repomix-output.txt
+
+# Kubernetes manifests if not needed in the image
+k8s/
