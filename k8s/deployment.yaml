@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: wavescreen
   name: wavescreen-deployment
+  namespace: wavescreen
 spec:
   replicas: 1
   selector:
@@ -19,9 +19,10 @@ spec:
         ports:
         - containerPort: 3000
         volumeMounts:
-        - name: screenshots-volume
-          mountPath: /app/static/
+        - name: static-volume
+          mountPath: /app/static
       volumes:
-      - name: screenshots-volume
-        persistentVolumeClaim:
-          claimName: pvc-screenshots
+      - name: static-volume
+        hostPath:
+          path: /home/gmn/wavescreen/static
+          type: DirectoryOrCreate
